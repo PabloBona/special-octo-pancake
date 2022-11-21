@@ -7,6 +7,10 @@ const QuoteBox = ({ quoteRandom, handleClick,colorRandom }) => {
         color:colorRandom
     }
 
+    const objStyleBg = {
+        backgroundColor: colorRandom
+      } 
+
     return (
         <article className="card" style={objStyle}>
             <p className="card__quote">
@@ -15,9 +19,8 @@ const QuoteBox = ({ quoteRandom, handleClick,colorRandom }) => {
                 />
                 {quoteRandom.quote}
             </p>
-            <h1 className="card__author ">{quoteRandom.author}</h1>
-
-            <button style={objStyle} onClick={handleClick}> 
+            <em> <p className="card__author ">{quoteRandom.author}</p></em>
+            <button style={objStyleBg} onClick={handleClick}> 
                 &gt;
             </button> 
         </article>
