@@ -4,7 +4,7 @@ import "./index.css"
 import quotes from "./json/quotes.json"
 import colors from "./json/colors.json"
 import QuoteBox from "./components/QuoteBox"
- 
+
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
   const [colorRandom, setColorRandom] = useState(getRandomFromArray(colors))
 
 
-   
+
   const handleClick = () => {  //este handleclock es el que vamos a mandar a QuoteBox.ksx como props
     setQuoteRandom(getRandomFromArray(quotes)) //setQuoteRandom es una funcion y le mando como parametros el getRandomFromArray(quotes) q randomiza el quotes del json
     setColorRandom(getRandomFromArray(colors)) //setColorRandom es una funcion y le mando como parametros el getRandomFromArray(colors) q randomiza el color del json
